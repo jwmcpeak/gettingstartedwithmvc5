@@ -1,0 +1,20 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Scripts.Render("~/bundles/js")
+</head>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+    @if (IsSectionDefined("sidebar")) { 
+    <div>
+        @RenderSection("sidebar", false)
+    </div>
+    }
+</body>
+</html>

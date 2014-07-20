@@ -1,0 +1,16 @@
+﻿@model Product
+
+
+<div class="product-container">
+    <div><a href="/products/@Model.Categories.First().Name/@Model.Id">@Model.Name</a></div>
+    <div>
+        @Html.RouteLink(Model.Name, new
+    {
+        controller = "products",
+        action = "details",
+        category = Model.Categories.First().Name,
+        id = Model.Id
+    })
+</div>
+<div>@Model.Price</div>
+</div>

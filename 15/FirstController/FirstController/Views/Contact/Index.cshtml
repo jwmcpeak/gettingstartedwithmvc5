@@ -1,0 +1,32 @@
+﻿@model ContactMessage
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Contact Us</h2>
+
+@using (var frm = Html.BeginForm("index", "contact"))
+{
+    @Html.AntiForgeryToken()
+    <div>
+        @Html.ValidationSummary()
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.CustomerName)
+        @Html.TextBoxFor(m => m.CustomerName)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.CustomerEmail)
+        @Html.TextBoxFor(m => m.CustomerEmail)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.CustomerMessage)
+        @Html.TextAreaFor(m => m.CustomerMessage)
+    </div>
+
+    <div><input type="submit" value="Send" /></div>
+}

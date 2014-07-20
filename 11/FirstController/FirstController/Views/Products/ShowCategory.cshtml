@@ -1,0 +1,16 @@
+﻿@model IQueryable<Product>
+
+@{
+    ViewBag.Title = "Category";
+}
+
+<h2>Category</h2>
+
+@foreach (var product in Model)
+{
+    @Html.Partial("_ProductDetails", product)
+}
+
+@section sidebar {
+    <p>This is the sidebar.</p>
+}

@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "All Products";
+    var name = "<b>Jeremy</b>";
+}
+
+    <p>Hello, @Html.Raw(name)</p>
+
+    
+
+    @foreach (var character in "hello razor")
+    {
+        @Html.Partial("_ProductDetails")
+    }
+        

@@ -1,0 +1,30 @@
+﻿@{
+    Layout = null;
+
+    var name = "<b>Jeremy</b>";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>Hello, @Html.Raw(name)</p>
+
+    <ul>
+        @foreach (var character in "hello razor")
+        {
+            <li>@character</li>
+        }
+        
+    </ul>
+
+
+
+
+
+</body>
+</html>

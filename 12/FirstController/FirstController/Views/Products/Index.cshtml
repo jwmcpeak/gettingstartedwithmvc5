@@ -1,0 +1,16 @@
+﻿@model IQueryable<Product>
+
+@{
+    ViewBag.Title = "All Products";
+    var name = "<b>Jeremy</b>";
+}
+
+    <p>Hello, @Html.Raw(name)</p>
+
+    
+
+    @foreach (var product in Model)
+    {
+        @Html.Partial("_ProductDetails", product)
+    }
+        
